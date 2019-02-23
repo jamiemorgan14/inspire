@@ -6,24 +6,36 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Inspire</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="bg-image">
-	<div id="weather">
-		Your Weather Template
-	</div>
+<body id="bg-image" background="URL">
+	<main class="container-fluid">
+		<section class="row">
+			<div class="col-3 text-center" id="weather">
 
-	<div id="quote">
-		The Quote
-	</div>
+			</div>
 
-	<div>
-		A Todo List
-		<div id="todo-error"></div>
-		<form onsubmit=""></form>
-		<div id="todos"></div>
-	</div>
+		</section>
+		<section class="row">
+			<div id="todo-error"></div>
+
+			<div class="col-12 text-center" id="todos">
+
+			</div>
+		</section>
+		<section class="row h75 d-flex align-items-center">
+			<div class="col-12 text-white text-center" id="quote">
+			</div>
+
+		</section>
+
+
+
+
+	</main>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 	<script type="module" src="app/main.js"></script>

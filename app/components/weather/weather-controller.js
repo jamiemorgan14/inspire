@@ -3,7 +3,7 @@ import WeatherService from "./weather-service.js";
 var _weatherService = new WeatherService()
 
 function drawWeather() {
-	console.log("THE WEATHER MAN SAYS:", _weatherService.Weather)
+	document.getElementById('weather').innerHTML = _weatherService.Weather.getTemplate();
 }
 
 export default class WeatherController {
