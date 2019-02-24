@@ -15,6 +15,8 @@ let _subscribers = {
 	error: []
 }
 
+
+
 function _setState(prop, data) {
 	_state[prop] = data
 	_subscribers[prop].forEach(fn => fn())
@@ -57,7 +59,6 @@ export default class TodoService {
 		todoApi.put(todoId, todo)
 			.then(res => {
 				//DO YOU WANT TO DO ANYTHING WITH THIS?
-
 			})
 			.catch(err => _setState('error', err.response.data))
 	}
@@ -67,6 +68,9 @@ export default class TodoService {
 			.then(res => {
 				this.getTodos()
 			})
+	}
+	showDelete(action) {
+		document.getElementById('delete').style.visibility = action;
 	}
 
 }

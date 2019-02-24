@@ -11,18 +11,18 @@
   background-color: rgba(0, 0, 0, 0.171)
 }
 
-.weather {
+.main-clock {
+  background-color: rgba(0, 0, 0, 0.034);
   color: white;
-  text-shadow: 0 0 8px black;
+  text-shadow: 0 0 40px black
 }
 
-.h75 {
-  height: 75vh;
+.weather {
+  background-color: rgba(0, 0, 0, 0.034);
+  color: white;
+  text-shadow: 0 0 40px black
 }
 
 .completed {
   text-decoration: line-through
-}
-
-.listed {
 }

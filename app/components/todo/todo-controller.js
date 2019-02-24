@@ -15,6 +15,7 @@ function _drawTodos() {
 		<button class="btn btn-outline-info btn-blk" type="submit">Add</button>
 	</form>
 	`
+	_todoService.showDelete('hidden')
 }
 
 function _drawError() {
@@ -51,6 +52,8 @@ export default class TodoController {
 		_todoService.removeTodo(todoId)
 	}
 
-
+	showDelete(action) {
+		_todoService.showDelete(action)
+	}
 
 }

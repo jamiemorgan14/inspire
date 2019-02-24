@@ -7,7 +7,10 @@ export default class Todo {
   }
   getTemplate() {
     return `
-    <li onclick="app.controllers.todoController.toggleTodoStatus('${this.id}')"class="listed text-white">${this.description} <button hidden class="btn btn-outline-danger" onclick="app.controllers.todoController.removeTodo('${this.id}')">X</button></li>
+              <li onmouseover="app.controllers.todoController.showDelete('visible')" onmouseout="app.controllers.todoController.showDelete('hidden')" onclick="app.controllers.todoController.toggleTodoStatus('${this.id}')" class="listed text-white">${this.description}
+              
+              <button class="btn btn-outline-danger" id="delete" onclick="app.controllers.todoController.removeTodo('${this.id}')">X</button></li> 
+								
 `
   }
 }
