@@ -5,22 +5,24 @@
 
 #bg-image {
   background-attachment: fixed;
-  background-position: center;
+  background-position: top;
   background-size: cover;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.171)
 }
 
-.list-group-item {
-  background-color: rgba(12, 19, 27, 0.267);
+.weather {
   color: white;
   text-shadow: 0 0 8px black;
 }
 
-.card {
-  background-color: rgba(255, 255, 255, 0);
-}
-
 .h75 {
   height: 75vh;
+}
+
+.completed {
+  text-decoration: line-through
+}
+
+.listed {
 }

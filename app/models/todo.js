@@ -6,8 +6,8 @@ export default class Todo {
     this.description = data.description || 'Add a task'
   }
   getTemplate() {
-    return `				
-  <li onclick="app.controllers.todoController.toggleTodoStatus('${this.id}')"class="text-white">${this.description}</li><button onclick="app.controllers.todoController.removeTodo('${this.id}')">X</button>
+    return `
+    <li onclick="app.controllers.todoController.toggleTodoStatus('${this.id}')"class="listed text-white">${this.description} <button hidden class="btn btn-outline-danger" onclick="app.controllers.todoController.removeTodo('${this.id}')">X</button></li>
 `
   }
 }

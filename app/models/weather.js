@@ -13,13 +13,6 @@ export default class Weather {
 
   getTemplate() {
     return `
-    <div class="card">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item weather-card">Temp: ${this.kelvin}</li>
-        <li class="list-group-item">Humidity: ${this.humidity}</li>
-        <li class="list-group-item">Weather: ${this.description.toUpperCase()}</li>
-        <li class="list-group-item">City: ${this.city.toUpperCase()}</li>
-      </ul>
-    </div>`
+        <h4 class="weather">${this.kelvin}° F</h4>`
   }
 }

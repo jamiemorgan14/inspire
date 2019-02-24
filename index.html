@@ -12,32 +12,33 @@
 </head>
 
 <body id="bg-image" background="URL">
-	<main class="container-fluid">
+	<main class="container-fluid h-75">
 		<section class="row">
-			<div class="col-3 text-center" id="weather">
+			<div class="col-1 text-center" id="weather">
 
 			</div>
 
-		</section>
-		<section class="row">
-			<div class="col-12 text-center" id="todo-error">
+			<div class="offset-sm-9 text-center" id="todo-entry">
 
 			</div>
-			<div class="col-12 text-center">
+			<div class="offset-sm-10 text-center">
 				<ul id="todos">
 				</ul>
 			</div>
+
 		</section>
-		<section class="row h75 d-flex align-items-center">
-			<div class="col-12 text-white text-center" id="quote">
+	</main>
+	<section class="container-fluid h-25 d-flex justify-content-center align-items-end">
+		<div class="row">
+			<div class="col-12 text-white" id="quote">
 			</div>
 
-		</section>
+		</div>
+	</section>
 
 
 
 
-	</main>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 	<script type="module" src="app/main.js"></script>

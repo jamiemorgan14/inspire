@@ -4,7 +4,7 @@ export default class Quote {
   }
   getTemplate() {
     return `
-    <h1>${this.quote}</h1>
+    <h2 class="mb-5">"${this.quote}"</h2>
     `
   }
 }

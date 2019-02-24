@@ -9,10 +9,10 @@ function _drawTodos() {
 		template += todo.getTemplate()
 	})
 	document.getElementById('todos').innerHTML = template
-	document.getElementById('todo-error').innerHTML = `
+	document.getElementById('todo-entry').innerHTML = `
 	<form onsubmit="app.controllers.todoController.addTodo(event)">
-		<input type="text" name="description" placeholder="Add" required>
-		<button type="submit">Add</button>
+		<input class="form-control form-control-lg" type="text" name="description" placeholder="Add" required>
+		<button class="btn btn-outline-info btn-blk" type="submit">Add</button>
 	</form>
 	`
 }
