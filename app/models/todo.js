@@ -3,17 +3,11 @@ export default class Todo {
     this.id = data.id || data._id
     this.completed = data.completed
     this.user = data.user
-    this.description = data.description
-    this.message = data.message
+    this.description = data.description || 'Add a task'
   }
   getTemplate() {
-    return `
-        <h3>${this.user}</h3>					
-    			<ul>
-            <li>
-							<ul class="text-white">${this.description}</ul>
-						</li>
-					</ul>
+    return `				
+    			<li class="text-white">${this.description}</li>
 `
   }
 }
