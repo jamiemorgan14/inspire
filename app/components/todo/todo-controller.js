@@ -11,7 +11,7 @@ function _drawTodos() {
 	document.getElementById('todos').innerHTML = template
 	document.getElementById('todo-entry').innerHTML = `
 	<form onsubmit="app.controllers.todoController.addTodo(event)">
-		<input class="form-control form-control-md text-center" type="text" name="description" placeholder="${_todoService.printTodos()} Things to do" required>
+		<input class="form-control form-control-md text-center" type="text" name="description" placeholder="${_todoService.printTodos()} Things left to do" required>
 		<button class="btn btn-outline-info btn-blk" type="submit">Add</button>
 	</form>
 	`
