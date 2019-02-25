@@ -6,11 +6,14 @@ export default class Todo {
     this.description = data.description || 'Add a task'
   }
   getTemplate() {
-    return `
-              <li onmouseover="app.controllers.todoController.showDelete('visible')" onmouseout="app.controllers.todoController.showDelete('hidden')" onclick="app.controllers.todoController.toggleTodoStatus('${this.id}')" class="listed text-white">${this.description}
+    if (this.completed) {
+      return `
+      <hr><li onclick="app.controllers.todoController.toggleTodoStatus('${this.id}')" class="completed text-white">${this.description}</li>
               
-              <button class="btn btn-outline-danger" id="delete" onclick="app.controllers.todoController.removeTodo('${this.id}')">X</button></li> 
-								
-`
+      <button class="btn btn-outline-danger" id="delete" onclick="app.controllers.todoController.removeTodo('${this.id}')">X</button>`
+    } else {
+      return `
+      <hr><li onclick="app.controllers.todoController.toggleTodoStatus('${this.id}')" class="text-white">${this.description}</li>`
+    }
   }
 }

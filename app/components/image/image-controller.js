@@ -12,5 +12,9 @@ export default class ImageController {
     _is.getImage()
   }
 
+  getImage() {
+    _is.getImage()
+  }
+
 }
 

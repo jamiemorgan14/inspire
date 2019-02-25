@@ -26,4 +26,8 @@ export default class QuoteController {
   hideAuthor() {
     _qs.hideAuthor()
   }
+
+  getQuote() {
+    _qs.getQuote()
+  }
 }

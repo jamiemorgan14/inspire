@@ -6,6 +6,7 @@ const todoApi = axios.create({
 	timeout: 3000
 });
 
+
 let _state = {
 	todos: [],
 	error: {},
@@ -58,7 +59,7 @@ export default class TodoService {
 		todo.completed = !todo.completed
 		todoApi.put(todoId, todo)
 			.then(res => {
-				//DO YOU WANT TO DO ANYTHING WITH THIS?
+				this.getTodos()
 			})
 			.catch(err => _setState('error', err.response.data))
 	}
@@ -69,8 +70,6 @@ export default class TodoService {
 				this.getTodos()
 			})
 	}
-	showDelete(action) {
-		document.getElementById('delete').style.visibility = action;
-	}
+
 
 }

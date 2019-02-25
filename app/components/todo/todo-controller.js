@@ -6,16 +6,15 @@ function _drawTodos() {
 	let todos = _todoService.Todos
 	let template = ''
 	todos.forEach(todo => {
-		template += todo.getTemplate()
+		template += todo.getTemplate();
 	})
 	document.getElementById('todos').innerHTML = template
 	document.getElementById('todo-entry').innerHTML = `
 	<form onsubmit="app.controllers.todoController.addTodo(event)">
-		<input class="form-control form-control-lg" type="text" name="description" placeholder="Add" required>
+		<input class="form-control form-control-md text-center" type="text" name="description" placeholder="List your priorities" required>
 		<button class="btn btn-outline-info btn-blk" type="submit">Add</button>
 	</form>
 	`
-	_todoService.showDelete('hidden')
 }
 
 function _drawError() {
@@ -50,10 +49,6 @@ export default class TodoController {
 	removeTodo(todoId) {
 		// ask the service to run the remove todo with this id
 		_todoService.removeTodo(todoId)
-	}
-
-	showDelete(action) {
-		_todoService.showDelete(action)
 	}
 
 }

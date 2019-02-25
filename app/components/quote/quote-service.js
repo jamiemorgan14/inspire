@@ -50,12 +50,14 @@ export default class QuoteService {
 		let _currentHours = _currentTime.getHours()
 		let _currentMinutes = _currentTime.getMinutes()
 		let _currentSeconds = _currentTime.getSeconds()
+		// @ts-ignore
 		_currentMinutes = (_currentMinutes < 10 ? "0" : "") + _currentMinutes
+		// @ts-ignore
 		_currentSeconds = (_currentSeconds < 10 ? "0" : "") + _currentSeconds
 		let timeOfDay = (_currentHours < 12) ? "AM" : "PM"
 		_currentHours = (_currentHours > 12) ? _currentHours - 12 : _currentHours;
 		_currentHours = (_currentHours == 0) ? 12 : _currentHours;
-		let alert = (timeOfDay == 'AM') ? "Good Morning!" : "Good Afternoon!"
+		let alert = (timeOfDay == 'AM') ? "Good Morning" : "Good Afternoon"
 		let currentTimeString = `${_currentHours}:${_currentMinutes} ${timeOfDay} <br> ${alert}`;
 		return currentTimeString
 	}

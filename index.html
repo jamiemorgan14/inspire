@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Inspire</title>
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Special+Elite" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	 crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/style.css">
@@ -14,21 +15,19 @@
 <body id="bg-image" background="URL">
 	<main class="container-fluid h-50">
 		<section class="row">
-			<div class="col-1 text-center mt-2" id="weather">
-
+			<div class="col-1 text-center mt-1" id="weather">
 			</div>
-
-			<div class="offset-sm-9 text-center mt-2" id="todo-entry">
-
-			</div>
-			<div class="offset-sm-10 text-center">
-				<ol id="todos">
-
-				</ol>
+			<div class="main-clock offset-md-9 mt-1">
+				<div class="text-center" id="todo-entry">
+					<hr>
+				</div>
+				<ul id="todos">
+				</ul>
 			</div>
 		</section>
 	</main>
-	<section class="container-fluid h-25 d-flex justify-content-center">
+
+	<section class="container-fluid h-25 d-flex align-items-end justify-content-center">
 		<section class="row">
 			<div class="col-12" id="clock">
 
@@ -36,12 +35,19 @@
 		</section>
 	</section>
 
-	<section class="container-fluid h-25 d-flex justify-content-center align-items-end">
+	<section class="container-fluid d-flex align-items-end justify-content-center">
 		<div class="row">
 			<div onmouseover="app.controllers.quoteController.showAuthor()" onmouseout="app.controllers.quoteController.hideAuthor()"
 			 class="col-12 text-white" id="quote">
 			</div>
-
+		</div>
+	</section>
+	<section class="container-fluid mt-2">
+		<div class="row">
+			<div class="col-12 text-center">
+				<button class="btn btn-info" onclick="app.controllers.imageController.getImage()">New Image</button>
+				<button class="btn btn-info" onclick="app.controllers.quoteController.getQuote()">New Quote</button>
+			</div>
 		</div>
 	</section>
 

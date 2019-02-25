@@ -3,6 +3,15 @@
   font-size: 2em;
 }
 
+body {
+
+font-family: 'Special Elite', cursive;
+}
+
+#quote {
+  font-family: 'Kaushan Script', cursive;
+}
+
 #bg-image {
   background-attachment: fixed;
   background-position: top;
@@ -11,10 +20,23 @@
   background-color: rgba(0, 0, 0, 0.171)
 }
 
+ul {
+  list-style-type: none;
+}
+
+.btn {
+padding: 0px
+}
+
+.form-control {
+background-color: rgba(241, 232, 232, 0.596);
+border: 1px solid rgba(0, 0, 0, 0.116)
+}
+
 .main-clock {
-  background-color: rgba(0, 0, 0, 0.034);
+  background-color: rgba(155, 143, 143, 0.192);
   color: white;
-  text-shadow: 0 0 40px black
+  text-shadow: 0 0 40px black;
 }
 
 .weather {
