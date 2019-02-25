@@ -9,10 +9,12 @@ export default class Weather {
     this.kelvin = ((data.main.temp - 273.15) * 9 / 5 + 32).toFixed(1)
     this.description = data.weather[0].description
     this.humidity = data.main.humidity
+    this.icon = data.weather[0].icon
   }
 
   getF() {
     return `
-        <h4 class="weather">${this.kelvin}° F</h4>`
+    <h4 class="weather">${this.kelvin}° F
+    <img src="http://www.openweathermap.org/img/w/${this.icon}.png"></h4>`
   }
 }
