@@ -19,14 +19,6 @@ function _setState(prop, data) {
 	_subscribers[prop].forEach(fn => fn());
 }
 
-function convertToF(K) {
-	return ((- 273.15) * 9 / 5 + 32).toFixed(0)
-}
-
-function convertToC(K) {
-
-}
-
 
 export default class WeatherService {
 	get Weather() {
@@ -42,4 +34,5 @@ export default class WeatherService {
 			_setState('weather', new Weather(res.data))
 		})
 	}
+
 }

@@ -11,7 +11,7 @@ export default class Weather {
     this.humidity = data.main.humidity
   }
 
-  getTemplate() {
+  getF() {
     return `
         <h4 class="weather">${this.kelvin}° F</h4>`
   }
