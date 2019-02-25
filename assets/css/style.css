@@ -5,7 +5,11 @@
 
 body {
 
-font-family: 'Special Elite', cursive;
+  font-family: 'Special Elite', cursive;
+}
+
+ul {
+  list-style-type: none;
 }
 
 #quote {
@@ -20,10 +24,10 @@ font-family: 'Special Elite', cursive;
   background-color: rgba(0, 0, 0, 0.171)
 }
 
-ul {
-  list-style-type: none;
+#placeholder::placeholder {
+  color:  #17a2b8;
+  text-shadow: 0 0 3px white
 }
-
 .btn {
 padding: 0px
 }
@@ -36,13 +40,13 @@ border: 1px solid rgba(0, 0, 0, 0.116)
 .main-clock {
   background-color: rgba(155, 143, 143, 0.192);
   color: white;
-  text-shadow: 0 0 40px black;
+  text-shadow: 0 0 5px black;
 }
 
 .weather {
   background-color: rgba(0, 0, 0, 0.034);
   color: white;
-  text-shadow: 0 0 40px black
+  text-shadow: 0 0 5px black
 }
 
 .completed {
