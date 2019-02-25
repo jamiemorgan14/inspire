@@ -71,5 +71,9 @@ export default class TodoService {
 			})
 	}
 
+	printTodos() {
+		return _state.todos.length
+	}
+
 
 }
